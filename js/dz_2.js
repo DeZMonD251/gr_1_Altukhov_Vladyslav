@@ -1,4 +1,3 @@
-/*
 const PI = 3.14159;
 distance = parseFloat(prompt(`Value distance in kilometers:`));
 while (isNaN(distance)) {
@@ -13,7 +12,7 @@ wheel_diameter = wheel_diameter * 0.0254;
 circumference = PI * wheel_diameter;
 number_of_wheel_revolutions =  distance / circumference;
 alert(`Количество оборотов колеса: ${number_of_wheel_revolutions}\nКоличество оборотов четырёх колёс: ${number_of_wheel_revolutions * 4}`);
-*/
+
 function declension(days) {
     last_digit = days % 10;
     if (last_digit === 1) {
