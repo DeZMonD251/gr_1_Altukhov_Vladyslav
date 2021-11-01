@@ -1,16 +1,16 @@
-function search_for_numbers(first_nimber, last_number, divider){
-    str = '';
+function search_for_numbers(first_nimber, second_number, divider){
     count = 0;
-    for (i = first_number; i <= last_number; i++) {
+    sum = 0;
+    for (i = first_nimber; i <= second_number; i++) {
         if (i % divider === 0) {
-            str += i + '; ';
+            sum += i;
             count++;
         }
     }
     if (count === 0) {
         return `На данном промежутке чисел кратных ${divider} нет.`;
     } else {
-        return str;
+        return `Количество чисел кратных ${divider}: ` + count + '\n' + 'Их сумма: ' + sum;
     }
 }
 divider = 6;
@@ -26,7 +26,7 @@ if (count !== 0) {
   count = 3;
   second_number = parseInt(prompt(`Второе число:`));
   while (isNaN(second_number) && count > 0) {
-    first_number = parseInt(prompt(`Введите число!`));
+    second_number = parseInt(prompt(`Введите число! Количество оставшихся попыток: ${count}`));
     count--;
   }
   if (count !== 0) {
@@ -41,6 +41,7 @@ if (count !== 0) {
     }
   }
 }
+
 const MAX_COUNT_ATTEMPT = 5;
 min = 0; max = 100;
 attempt = 0;

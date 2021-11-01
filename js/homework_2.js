@@ -35,10 +35,11 @@ while (isNaN(days)) {
   count++;
 }
 mod100 = days % 100;
+mod10 = days % 10;
 if (count !== 3) {
   if (mod100 >= 5 && mod100 <= 20) {
     alert(`${days} дней`);
-  } else if (mod100 === 1) {
+  } else if (mod10 === 1) {
     alert(`${days} день`);
   } else {
     alert(`${days} дня`);
