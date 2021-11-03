@@ -45,18 +45,22 @@ for (i = 500; i <= 888; i++) {
   }
 }
 for (i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+  //console.log(arr[i]);
 }
 /*Необходимо написать функцию, которая принимает слово в виде строки, 
 функция будет возвращать слово с буквами в обратном порядке, 
 например в функцию передаем слово “ТЕЛЕФОН”, на выходе имеем слово «НОФЕЛЕТ».*/
-arr_string = new Array();
-string = prompt(`Введите строку:`);
-arr1 = string.split('');
-for (i = arr1.length - 1; i >= 0; i--) {
-  arr_string.push(arr1[i]);
+function reverse(string) {
+  arr_string = new Array();
+  arr1 = new Array();
+  arr_string = string.split('');
+  for (i = arr_string.length - 1; i >= 0; i--) {
+    arr1.push(arr_string[i]);
+  }
+  return arr1.join('');
 }
-console.log(arr_string.join(''));
+string = prompt(`Введите строку:`);
+console.log(reverse(string));
 /*ЗАДАНИЕ С ВЫСОКИМ УРОВНЕМ
 Необходимо написать мини-игру «Города». Нужно бесконечно запрашивать у пользователя ввод города. 
 Проверять если последняя буква предыдущего слова совпадает с первой буквой следующего слова – засчитываем +1 очко. 
