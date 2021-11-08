@@ -4,7 +4,7 @@
 function get_count_days(date) {
     now = new Date();
     ny = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0);
-    if (isNaN(date)) {
+    if (date instanceof Date) {
         date = new Date();
         return Math.floor((ny.getTime() - date.getTime()) / 86400000);
     } else {
