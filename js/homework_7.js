@@ -1,6 +1,6 @@
 function Calculator(name){
     this.name = name;
-    history = ' ';
+    this.history = ' ';
     this.addition = function () {
         sum = 0;
         arg = '(';
@@ -18,7 +18,7 @@ function Calculator(name){
             }
         }
         date = new Date();
-        history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': сумма = ' + sum + arg + '\n';
+        this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': сумма = ' + sum + arg + '\n';
         console.log(sum);
     };
     this.multiplication = function () {
@@ -38,7 +38,7 @@ function Calculator(name){
             }
         }
         date = new Date();
-        history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': умножение = ' + pr + arg + '\n';
+        this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': умножение = ' + pr + arg + '\n';
         console.log(pr);
     };
     this.subtraction = function (a, b) {
@@ -50,7 +50,7 @@ function Calculator(name){
         }
         arg = '(' + a.toString() + ',' + b.toString() + ')'; 
         date = new Date();
-        history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': вычитаение = ' + result + arg + '\n';
+        this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': вычитаение = ' + result + arg + '\n';
     };
     this.division = function (a, b) {
         result = a / b;
@@ -61,13 +61,13 @@ function Calculator(name){
         }
         arg = '(' + a.toString() + ',' + b.toString() + ')'; 
         date = new Date();
-        history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': вычитаение = ' + result + arg + '\n';
+        this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': вычитаение = ' + result + arg + '\n';
     }
     this.showHistory = function () {
-        console.log(history);
+        console.log(this.history);
     };
     this.deleteHistory = function () {
-        history = ' ';
+        this.history = ' ';
     }
 }
 calculator = new Calculator('Calculator');
