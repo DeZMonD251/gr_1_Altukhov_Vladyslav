@@ -4,17 +4,19 @@ function Calculator(name){
     this.addition = function () {
         sum = 0;
         arg = '(';
+        for (let i = 0; i < arguments.length; i++) {
+            if (i === arguments.length - 1) {
+                arg += arguments[i].toString() + ')';
+            } else {
+                arg += arguments[i].toString() + ',';
+            }
+        }
         for (let i = 0; i < arguments.length; i++){
             if (typeof(arguments[i])  === 'number') {
                 sum += arguments[i];
             } else {
                 sum = 'Error';
                 break;
-            }
-            if (i === arguments.length - 1) {
-                arg += arguments[i].toString() + ')';
-            } else {
-                arg += arguments[i].toString() + ',';
             }
         }
         date = new Date();
@@ -24,17 +26,19 @@ function Calculator(name){
     this.multiplication = function () {
         pr = 1;
         arg = '(';
+        for (let i = 0; i < arguments.length; i++) {
+            if (i === arguments.length - 1) {
+                arg += arguments[i].toString() + ')';
+            } else {
+                arg += arguments[i].toString() + ',';
+            }
+        }
         for (let i = 0; i < arguments.length; i++){
             if (typeof(arguments[i])  === 'number') {
                 pr *= arguments[i];
             } else {
                 pr = 'Error';
                 break;
-            }
-            if (i === arguments.length - 1) {
-                arg += arguments[i].toString() + ')';
-            } else {
-                arg += arguments[i].toString() + ',';
             }
         }
         date = new Date();
@@ -71,7 +75,7 @@ function Calculator(name){
     }
 }
 calculator = new Calculator('Calculator');
-calculator.addition(1,12,2,6,3,5,3,8);
+calculator.addition(1,12,2,1,3,5,3,8);
 calculator.multiplication(1,4,2,5,2,7);
 calculator.subtraction(56, 75);
 calculator.division(56, 75);
