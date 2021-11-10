@@ -42,8 +42,8 @@ function Calculator(name){
         console.log(pr);
     };
     this.subtraction = function (a, b) {
-        result = a - b;
         if (typeof(a) === 'number' && typeof(b) === 'number') {
+            result = a - b;
             console.log(result);
         } else {
             console.log('Error!');
@@ -53,15 +53,15 @@ function Calculator(name){
         this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': вычитаение = ' + result + arg + '\n';
     };
     this.division = function (a, b) {
-        result = a / b;
         if (typeof(a) === 'number' && typeof(b) === 'number') {
+            result = a / b;
             console.log(result);
         } else {
             console.log('Error!');
         }
         arg = '(' + a.toString() + ',' + b.toString() + ')'; 
         date = new Date();
-        this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': вычитаение = ' + result + arg + '\n';
+        this.history += this.name + ' ' + date.toLocaleDateString() + ' ' + date.toLocaleTimeString() + ': деление = ' + result + arg + '\n';
     }
     this.showHistory = function () {
         console.log(this.history);
