@@ -71,7 +71,6 @@ function Calculator(name){
     }
 }
 calculator = new Calculator('Calculator');
-console.log(calculator);
 calculator.addition(1,12,2,6,3,5,3,8);
 calculator.multiplication(1,4,2,5,2,7);
 calculator.subtraction(56, 75);
