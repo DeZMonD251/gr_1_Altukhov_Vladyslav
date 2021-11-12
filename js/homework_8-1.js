@@ -36,7 +36,7 @@ function removeSquare () {
 }
 let container = document.createElement('div');
 document.body.append(container);
-setTimeout(createBlockSquare, 0);
-setTimeout(yellowSquare, 3000 * 1);
-setTimeout(task3, 3000 * 2);
-setTimeout(removeSquare, 3000 * 3);
+setTimeout(createBlockSquare, 3000);
+setTimeout(yellowSquare, 3000 * 2);
+setTimeout(task3, 3000 * 3);
+setTimeout(removeSquare, 3000 * 4);
