@@ -1,37 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 6px;
+}
+.triangle {
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 50px;
+  border-color: red transparent transparent red;
+}
+.mainDiv {
+  display: flex;
+  gap: 2px;
+  overflow: auto;
+}
 .firstTask {
-    width: 50px;
-    height: 50px;
+  min-width: 70px;
+  height: 70px;
 }
 .secondTask {
-    width: 100px;
-    height: 100px;
+  min-width: 100px;
+  height: 100px;
 }
 .square {
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
 }
-.blueSquare {
-    background: blue;
+.skyblueSquare {
+  background: skyblue;
 }
-.greenSquare {
-    background: green;
+.purpleSquare {
+  background: purple;
 }
 .redSquare {
-    background: red;
+  background: red;
 }
 .yellowSquare {
-    background: yellow;
+  background: yellow;
 }
 .blackBackground {
-    background: black;
+  background: black;
 }
 .container {
-    display: flex;
+  display: flex;
 }
 .container1 {
-    width: 500px;
-    height: 250px;
+  width: 100px;
+  height: 250px;
 }
 .container2 {
-    width: 400px;
-    height: 200px;
+  width: 250px;
+  height: 200px;
 }
